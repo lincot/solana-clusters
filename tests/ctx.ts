@@ -13,12 +13,13 @@ export class Context {
 
   constructor() {
     const provider = anchor.AnchorProvider.env();
+    anchor.setProvider(provider);
     this.connection = provider.connection;
     this.program = anchor.workspace.Clusters;
 
     const url = process.env.ANCHOR_PROVIDER_URL;
     this.cluster = "localnet";
-    for (let cluster in ["devnet", "testnet", "mainnet"]) {
+    for (let cluster of ["devnet", "testnet", "mainnet"]) {
       if (url.includes(cluster)) {
         this.cluster = cluster;
         break;

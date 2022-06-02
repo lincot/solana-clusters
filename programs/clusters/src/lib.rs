@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("Gf3bXGS7iA2EUxzXs1xS6qwZBPGS8idyqMNitQ5NKDSA");
+declare_id!("AVXRrXcVdRVH3WejLEUp2PkZvxBvjbvoK72aTeLJ6n93");
 
 #[cfg(any(
     all(
