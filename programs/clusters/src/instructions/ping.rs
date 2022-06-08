@@ -1,28 +1,26 @@
 use anchor_lang::prelude::*;
 
-const CLUSTER: &str = {
+const N: u16 = {
     #[cfg(feature = "devnet")]
     {
-        "devnet"
+        1
     }
     #[cfg(feature = "localnet")]
     {
-        "localnet"
+        2
     }
     #[cfg(feature = "mainnet")]
     {
-        "mainnet"
+        3
     }
     #[cfg(feature = "testnet")]
     {
-        "testnet"
+        4
     }
 };
 
 pub fn ping(_ctx: Context<Ping>) -> Result<()> {
-    emit!(Pong {
-        cluster: CLUSTER.into()
-    });
+    emit!(Pong { n: N });
 
     Ok(())
 }
@@ -32,5 +30,5 @@ pub struct Ping {}
 
 #[event]
 struct Pong {
-    cluster: String,
+    n: u16,
 }

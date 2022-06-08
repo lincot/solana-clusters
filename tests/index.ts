@@ -18,6 +18,6 @@ describe("clusters", () => {
     });
     await ctx.program.removeEventListener(listener);
     // @ts-ignore
-    expect(event.cluster).to.eql(ctx.cluster);
+    expect(event.n).to.eql(ctx.n);
   });
 });
