@@ -1,5 +1,4 @@
 import * as anchor from "@project-serum/anchor";
-import * as process from "process";
 import { Program } from "@project-serum/anchor";
 import { Clusters } from "../target/types/clusters";
 

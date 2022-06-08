@@ -3,7 +3,7 @@ use anchor_lang::prelude::*;
 
 pub mod instructions;
 
-declare_id!("AVXRrXcVdRVH3WejLEUp2PkZvxBvjbvoK72aTeLJ6n93");
+declare_id!("2BRZTbxtqPa45ZXe9bDro56FaTgFsJebD2u9wYGKe5iZ");
 
 #[program]
 pub mod clusters {
@@ -32,4 +32,4 @@ pub mod clusters {
     all(feature = "localnet", feature = "testnet"),
     all(feature = "mainnet", feature = "testnet"),
 ))]
-compile_error!("one of `localnet`, `devnet`, `testnet`, `mainnet` must be enabled as feature");
+compile_error!("one of `devnet`, `localnet`, `mainnet`, `testnet` must be enabled as feature");

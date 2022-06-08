@@ -1,18 +1,19 @@
 [features]
 seeds = false
 [programs.devnet]
-clusters = "AVXRrXcVdRVH3WejLEUp2PkZvxBvjbvoK72aTeLJ6n93"
+clusters = "2BRZTbxtqPa45ZXe9bDro56FaTgFsJebD2u9wYGKe5iZ"
 [programs.localnet]
-clusters = "AVXRrXcVdRVH3WejLEUp2PkZvxBvjbvoK72aTeLJ6n93"
+clusters = "2BRZTbxtqPa45ZXe9bDro56FaTgFsJebD2u9wYGKe5iZ"
 [programs.mainnet]
-clusters = "AVXRrXcVdRVH3WejLEUp2PkZvxBvjbvoK72aTeLJ6n93"
+clusters = "2BRZTbxtqPa45ZXe9bDro56FaTgFsJebD2u9wYGKe5iZ"
 [programs.testnet]
-clusters = "AVXRrXcVdRVH3WejLEUp2PkZvxBvjbvoK72aTeLJ6n93"
+clusters = "2BRZTbxtqPa45ZXe9bDro56FaTgFsJebD2u9wYGKe5iZ"
 
 [registry]
 url = "https://anchor.projectserum.com"
 
 [provider]
+# DO NOT EDIT directly. Use `scripts/changeCluster.ts CLUSTER`
 cluster = "localnet"
 wallet = "~/.config/solana/id.json"
 
