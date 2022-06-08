@@ -4,6 +4,10 @@ import { Context } from "./ctx";
 const ctx = new Context();
 
 describe("clusters", () => {
+  it("Initialize", async () => {
+    await ctx.program.methods.initialize().rpc();
+  });
+
   it("Ping", async () => {
     let listener: number;
     const event = await new Promise((resolve, _) => {
@@ -13,6 +17,7 @@ describe("clusters", () => {
       ctx.program.methods.ping().rpc();
     });
     await ctx.program.removeEventListener(listener);
+    // @ts-ignore
     expect(event.cluster).to.eql(ctx.cluster);
   });
 });

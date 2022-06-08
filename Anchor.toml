@@ -2,12 +2,18 @@
 seeds = false
 [programs.devnet]
 clusters = "AVXRrXcVdRVH3WejLEUp2PkZvxBvjbvoK72aTeLJ6n93"
+[programs.localnet]
+clusters = "AVXRrXcVdRVH3WejLEUp2PkZvxBvjbvoK72aTeLJ6n93"
+[programs.mainnet]
+clusters = "AVXRrXcVdRVH3WejLEUp2PkZvxBvjbvoK72aTeLJ6n93"
+[programs.testnet]
+clusters = "AVXRrXcVdRVH3WejLEUp2PkZvxBvjbvoK72aTeLJ6n93"
 
 [registry]
 url = "https://anchor.projectserum.com"
 
 [provider]
-cluster = "devnet"
+cluster = "localnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
