@@ -28,7 +28,12 @@ console.log(`changing cluster to ${cluster}`);
 
 replaceInFile(
   "programs/clusters/Cargo.toml",
-  /default = \[.*\]/g,
+  /default = \[.*\]/,
   `default = ["${cluster}"]`
 );
-replaceInFile("Anchor.toml", /cluster = ".*"/g, `cluster = "${cluster}"`);
+replaceInFile("Anchor.toml", /cluster = ".*"/, `cluster = "${cluster}"`);
+replaceInFile(
+  "config.ts",
+  /cluster: string = ".*"/,
+  `cluster: string = "${cluster}"`
+);

@@ -1,5 +1,6 @@
 import { expect } from "chai";
 import { Context } from "./ctx";
+import config from "../config";
 
 const ctx = new Context();
 
@@ -18,6 +19,6 @@ describe("clusters", () => {
     });
     await ctx.program.removeEventListener(listener);
     // @ts-ignore
-    expect(event.n).to.eql(ctx.n);
+    expect(event.n).to.eql(config.n);
   });
 });
