@@ -21,5 +21,5 @@ testnet = []
 default = ["localnet"]
 
 [dependencies]
-anchor-lang = { version = "0.24.2", features = ["init-if-needed"] }
-anchor-spl = "0.24.2"
+anchor-lang = "0.25.0"
+solana-program = "1.10.34"

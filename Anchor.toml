@@ -1,16 +1,14 @@
-[features]
-seeds = false
 [programs.devnet]
-clusters = "2BRZTbxtqPa45ZXe9bDro56FaTgFsJebD2u9wYGKe5iZ"
+clusters = "EwsSbcPDTpuoLaf5zSwHWTdY4CJmc7zodDMpKqV29R9D"
 [programs.localnet]
-clusters = "2BRZTbxtqPa45ZXe9bDro56FaTgFsJebD2u9wYGKe5iZ"
+clusters = "EwsSbcPDTpuoLaf5zSwHWTdY4CJmc7zodDMpKqV29R9D"
 [programs.mainnet]
-clusters = "2BRZTbxtqPa45ZXe9bDro56FaTgFsJebD2u9wYGKe5iZ"
+clusters = "EwsSbcPDTpuoLaf5zSwHWTdY4CJmc7zodDMpKqV29R9D"
 [programs.testnet]
-clusters = "2BRZTbxtqPa45ZXe9bDro56FaTgFsJebD2u9wYGKe5iZ"
+clusters = "EwsSbcPDTpuoLaf5zSwHWTdY4CJmc7zodDMpKqV29R9D"
 
-[registry]
-url = "https://anchor.projectserum.com"
+[test]
+startup_wait = 30000
 
 [provider]
 # DO NOT EDIT directly. Use `scripts/changeCluster.ts CLUSTER`
@@ -18,4 +16,4 @@ cluster = "localnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
-test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+test = "yarn ts-mocha -p ./tsconfig.json --no-timeouts --slow 0 --exit tests/**/*.ts"

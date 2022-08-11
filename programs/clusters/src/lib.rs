@@ -2,8 +2,10 @@ use crate::instructions::*;
 use anchor_lang::prelude::*;
 
 pub mod instructions;
+mod state_localnet;
+mod state_othernet;
 
-declare_id!("2BRZTbxtqPa45ZXe9bDro56FaTgFsJebD2u9wYGKe5iZ");
+declare_id!("EwsSbcPDTpuoLaf5zSwHWTdY4CJmc7zodDMpKqV29R9D");
 
 #[program]
 pub mod clusters {
@@ -15,6 +17,10 @@ pub mod clusters {
 
     pub fn ping(ctx: Context<Ping>) -> Result<()> {
         instructions::ping(ctx)
+    }
+
+    pub fn different_state(ctx: Context<DifferentState>) -> Result<()> {
+        instructions::different_state(ctx)
     }
 }
 
